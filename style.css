@@ -1,0 +1,153 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: monospace;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 100vh;
+    background: #0a3c2f;
+}
+
+.user-info {
+    margin: 30px;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    background: #0d614b;
+    padding: 10px 10px;
+    margin-right: 25px;
+}
+
+h1,
+h2 {
+    padding: 20px;
+}
+
+h1 {
+    color: #fff;
+    border-bottom-color: #fff;
+    border-bottom-width: 5px;
+    border-bottom-style: solid;
+}
+
+h2 {
+    font-size: 3em;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+
+}
+
+table {
+    /* border-collapse: gets rid of the space between td elements */
+    /* did this for a every-other background-color for tr for legiblity */
+    border-collapse: collapse;
+    margin-bottom: 10px;
+    color: #fff;
+    font-size: 1.5em;
+}
+
+th,
+td {
+    text-align: left;
+    width: 200px;
+    padding: 4px 0;
+    padding-left: 4px;
+}
+
+thead>tr>th {
+    text-transform: uppercase;
+    font-size: 1.2em
+}
+
+#table-body tr:nth-child(odd) {
+    background-color: #267c65;
+}
+
+tr>td:first-child {
+    font-weight: 900;
+}
+
+.reset {
+    padding: 15px 20px;
+    color: #267c65;
+    background: #fff;
+    border: none;
+    font-size: 1.5em;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 600;
+    display: block;
+    margin: auto;
+}
+
+.reset:focus {
+    color: #fff;
+    background: #267c65;
+}
+
+/* transform */
+.game {
+    width: 870px;
+    /* height: 440px; */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    transform-style: preserve-3d;
+    perspective: 500px;
+}
+
+/* transform */
+.item {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5em;
+    background: rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    /* transform: rotateY(180deg);
+    transition: 0.35s; */
+    /* border-radius: 10px; */
+}
+
+/* transform */
+.item.boxOpen {
+    transform: rotateY(0deg);
+}
+
+/* transform */
+.item::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: #209d7b;
+    /* opacity: 0.85; */
+    transition: 0.35s;
+    transform: rotateY(0deg);
+    backface-visibility: hidden;
+    /* border-radius: 10px; */
+}
+
+
+.boxOpen::after {
+    transform: rotateY(180deg);
+}
+
+.boxMatch::after {
+    transform: rotateY(180deg);
+}

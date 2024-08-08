@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>M E M O R Y</title>
+</head>
+
+<body>
+
+    <!-- Menu Area -->
+    <div class="user-info">
+        <h1>Match all of the pics with the fewest clicks to get the top score!</h1>
+        <h2 class="click-display">Total Clicks: <span id="click-num">0</span></h2>
+
+        <div id="high-score" class="high-score menu-item">
+            <!-- Position   Name    Score   Date -->
+            <table>
+                <thead>
+                    <tr>
+                        <th>Position</th>
+                        <th>Name</th>
+                        <th>Score</th>
+                        <!-- <th>Date</th> add this later. I think in local storage you can add an array to value within the key;value pair-->
+                    </tr>
+                </thead>
+                <tbody id="table-body">
+                    <!-- Code that goes in here is added from menu.js under getUserInfo() -->
+                </tbody>
+            </table>
+        </div>
+
+        <button class="reset" onclick="window.location.reload();">Click Me to Reset Game</button>
+    </div>
+
+    <!-- Game Area -->
+    <div class="container">
+        <!-- <h2>Memory</h2> -->
+        <div class="game"></div>
+    </div>
+
+    <script type="module" src="scripts/main.js" async defer></script>
+</body>
+
+</html>
